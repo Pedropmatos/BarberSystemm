@@ -32,6 +32,18 @@ public class Barbeiro extends Pessoa {
     public void setNivelAcesso(String nivelAcesso) {
         this.nivelAcesso = nivelAcesso;
     }
+
+    @Override
+    public String toString() {
+        return "Barbeiro{" +
+                "senha='" + senha + '\'' +
+                ", nivelAcesso='" + nivelAcesso + '\'' +
+                ", id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
+    }
 }
 
 

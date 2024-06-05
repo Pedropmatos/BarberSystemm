@@ -20,5 +20,16 @@ public class Cliente extends Pessoa {
     public void setSexo(char sexo) {
         this.sexo = sexo;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "sexo=" + sexo +
+                ", id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
+    }
 }
 

@@ -26,4 +26,21 @@ public class Servico {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Servico{" +
+                "id=" + id +
+                ", service='" + service + '\'' +
+                ", preco=" + preco +
+                '}';
+    }
 }
