@@ -7,7 +7,14 @@ import java.util.List;
 
 
 public class ServicoDAOImpl implements GenericDAO<Servico> {
-    private List<Servico> servicos = new ArrayList<>();
+
+    Servico servico1 = new Servico(1, "Cabelo", 20);
+    Servico servico2 = new Servico(2, "Barba", 10);
+    Servico servico3 = new Servico(3, "Sobrancelha", 6);
+    Servico servico4 = new Servico(4, "Pigmentação", 6);
+    Servico servico5 = new Servico(5, "Platinar", 30);
+
+    private final List<Servico> servicos = new ArrayList<>();
     private int currentId = 1;
 
     @Override

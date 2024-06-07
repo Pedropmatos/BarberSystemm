@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Objects;
+
 public class Cliente extends Pessoa {
     private char sexo;
 
@@ -31,5 +33,6 @@ public class Cliente extends Pessoa {
                 ", telefone='" + telefone + '\'' +
                 '}';
     }
+    
 }
 

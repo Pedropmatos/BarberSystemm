@@ -7,8 +7,14 @@ import java.util.List;
 
 
 public class BarbeiroDAOImpl implements GenericDAO<Barbeiro> {
-    private final List<Barbeiro> barbeiros = new ArrayList<>();
-    private int currentId = 1; // Para gerar IDs únicos
+
+
+    Barbeiro barbeiro1 = new Barbeiro(1, "barbeiro1", "0323232433", "323246456", "senha", "todos");
+    Barbeiro barbeiro2 = new Barbeiro(2, "barbeiro2", "012654373", "323763456", "senha", "todos");
+
+
+    private List<Barbeiro> barbeiros = new ArrayList<>();
+    private int currentId = 1;
 
     @Override
     public void save(Barbeiro barbeiro) {
