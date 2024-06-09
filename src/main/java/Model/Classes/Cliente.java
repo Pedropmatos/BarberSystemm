@@ -1,6 +1,4 @@
-package Model;
-
-import java.util.Objects;
+package Model.Classes;
 
 public class Cliente extends Pessoa {
     private char sexo;

@@ -1,4 +1,4 @@
-package Model;
+package Model.Classes;
 
 abstract public class Pessoa {
 

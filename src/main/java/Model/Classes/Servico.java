@@ -1,4 +1,4 @@
-package Model;
+package Model.Classes;
 
 public class Servico {
     private int id;

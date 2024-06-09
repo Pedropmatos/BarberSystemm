@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barbersystemm.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
     <left>
-        <AnchorPane prefHeight="472.0" prefWidth="357.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="476.0" prefWidth="357.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fitHeight="500.0" fitWidth="357.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="476.0" fitWidth="445.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@pexels-fotios-photos-1895701.jpg" />
                     </image>
@@ -24,13 +24,13 @@
         </AnchorPane>
     </left>
     <right>
-        <AnchorPane prefHeight="472.0" prefWidth="344.0" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="500.0" prefWidth="345.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField layoutX="110.0" layoutY="216.0" promptText="User" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;">
+                <TextField layoutX="113.0" layoutY="218.0" promptText="User" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;">
                     <font>
                         <Font name="Berlin Sans FB" size="12.0" />
                     </font></TextField>
-                <PasswordField layoutX="110.0" layoutY="250.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;" />
+                <PasswordField layoutX="110.0" layoutY="250.0" prefHeight="27.0" prefWidth="148.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;" />
                 <Hyperlink layoutX="112.0" layoutY="460.0" text="Forgot Your Password?" />
                 <Label layoutX="132.0" layoutY="89.0" text="LOGIN">
                     <font>

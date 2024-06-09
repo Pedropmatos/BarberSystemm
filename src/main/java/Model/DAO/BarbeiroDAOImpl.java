@@ -1,6 +1,6 @@
 package Model.DAO;
 
-import Model.Barbeiro;
+import Model.Classes.Barbeiro;
 
 import java.util.ArrayList;
 import java.util.List;

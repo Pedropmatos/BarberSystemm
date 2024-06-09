@@ -1,9 +1,8 @@
-package Model;
+package Model.Classes;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.SimpleTimeZone;
 
 public class Agendamento {
     private int id;
