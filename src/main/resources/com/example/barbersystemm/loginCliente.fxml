@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barbersystemm.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barbersystemm.LoginClienteController">
     <left>
         <AnchorPane prefHeight="476.0" prefWidth="357.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fitHeight="476.0" fitWidth="445.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="476.0" fitWidth="403.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@pexels-fotios-photos-1895701.jpg" />
                     </image>
@@ -24,19 +24,19 @@
         </AnchorPane>
     </left>
     <right>
-        <AnchorPane prefHeight="500.0" prefWidth="345.0" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="490.0" prefWidth="343.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField layoutX="113.0" layoutY="218.0" promptText="User" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;">
+                <TextField layoutX="113.0" layoutY="218.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;">
                     <font>
                         <Font name="Berlin Sans FB" size="12.0" />
                     </font></TextField>
-                <PasswordField layoutX="110.0" layoutY="250.0" prefHeight="27.0" prefWidth="148.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;" />
+                <PasswordField layoutX="110.0" layoutY="250.0" prefHeight="27.0" prefWidth="148.0" promptText="CPF" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;" />
                 <Hyperlink layoutX="112.0" layoutY="460.0" text="Forgot Your Password?" />
                 <Label layoutX="132.0" layoutY="89.0" text="LOGIN">
                     <font>
                         <Font name="Bauhaus 93" size="30.0" />
                     </font></Label>
-                <Button fx:id="btLogin" layoutX="153.0" layoutY="305.0" mnemonicParsing="false" onAction="#onbtLoginAction" style="-fx-background-color: #000080;" text="LOGIN" textFill="WHITE">
+                <Button fx:id="btLogin3" layoutX="153.0" layoutY="305.0" mnemonicParsing="false" onAction="#onbtLogin3Action" style="-fx-background-color: #000080;" text="LOGIN" textFill="WHITE">
                     <font>
                         <Font name="Bauhaus 93" size="12.0" />
                     </font>
@@ -51,10 +51,16 @@
                         <Image url="@padlock_2889676.jpg" />
                     </image>
                 </ImageView>
-            <Button fx:id="btLogin2" layoutX="131.0" layoutY="426.0" mnemonicParsing="false" onAction="#onbtLogin2Action" style="-fx-background-color: #000080;" text="SOU CLIENTE" textFill="WHITE">
+                <Button fx:id="btCadastro" layoutX="134.0" layoutY="428.0" mnemonicParsing="false" onAction="#onbtCadastroAction" style="-fx-background-color: #000080;" text="CADASTRE-SE" textFill="WHITE">
+                    <font>
+                        <Font name="Bauhaus 93" size="12.0" />
+                    </font>
+                </Button>
+            <Button fx:id="btVoltar" layoutX="258.0" layoutY="24.0" mnemonicParsing="false" onAction="#onbtVoltarAction" style="-fx-background-color: #000080;" text="Voltar" textFill="WHITE">
                <font>
                   <Font name="Bauhaus 93" size="12.0" />
-               </font></Button>
+               </font>
+            </Button>
             </children>
         </AnchorPane>
     </right>

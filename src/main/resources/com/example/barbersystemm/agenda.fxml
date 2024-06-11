@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barbersystemm.AgendaController">
    <center>
       <AnchorPane prefHeight="400.0" prefWidth="637.0" BorderPane.alignment="CENTER">
          <children>
@@ -31,7 +30,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Button layoutX="275.0" layoutY="349.0" mnemonicParsing="false" text="Voltar" />
+            <Button fx:id="btVoltar5" layoutX="275.0" layoutY="349.0" mnemonicParsing="false" onAction="#onbtVoltar5Action" text="Voltar" />
          </children>
       </AnchorPane>
    </center>

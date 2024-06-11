@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barbersystemm.AgendamentoController">
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="266.0" BorderPane.alignment="CENTER">
          <children>
@@ -69,6 +68,11 @@
                </font>
             </Label>
             <Button layoutX="113.0" layoutY="319.0" mnemonicParsing="false" text="Agendar" />
+            <Button fx:id="btVoltar4" layoutX="264.0" layoutY="23.0" mnemonicParsing="false" onAction="#onbtVoltar4Action" text="Voltar">
+               <font>
+                  <Font name="Bauhaus 93" size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </center>
