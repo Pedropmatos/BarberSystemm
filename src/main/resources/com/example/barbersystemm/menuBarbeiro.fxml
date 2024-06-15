@@ -33,7 +33,7 @@
                   <Font name="Bauhaus 93" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="116.0" layoutY="196.0" mnemonicParsing="false" text="ESTOQUE">
+            <Button fx:id="btEstoque" layoutX="116.0" layoutY="196.0" mnemonicParsing="false" onAction="#onbtEstoqueAction" text="ESTOQUE">
                <font>
                   <Font name="Bauhaus 93" size="18.0" />
                </font>

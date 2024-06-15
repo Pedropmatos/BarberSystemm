@@ -8,13 +8,24 @@ import java.util.List;
 
 public class ServicoDAOImpl implements GenericDAO<Servico> {
 
+    private static ServicoDAOImpl instance;
+
     Servico servico1 = new Servico(1, "Cabelo", 20);
     Servico servico2 = new Servico(2, "Barba", 10);
     Servico servico3 = new Servico(3, "Sobrancelha", 6);
     Servico servico4 = new Servico(4, "Pigmentação", 6);
     Servico servico5 = new Servico(5, "Platinar", 30);
 
-    private final List<Servico> servicos = new ArrayList<>();
+    public final List<Servico> servicos;
+
+    public ServicoDAOImpl() {
+        servicos = new ArrayList<>();
+        servicos.add(servico1);
+        servicos.add(servico2);
+        servicos.add(servico3);
+        servicos.add(servico4);
+        servicos.add(servico5);
+    }
     private int currentId = 1;
 
     @Override
@@ -46,4 +57,11 @@ public class ServicoDAOImpl implements GenericDAO<Servico> {
 
     }
 
+    public static synchronized ServicoDAOImpl getInstance(){
+        if (instance == null){
+            instance = new ServicoDAOImpl();
+        }
+        return instance;
+    }
 }
+

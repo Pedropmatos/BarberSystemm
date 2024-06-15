@@ -37,4 +37,16 @@ public class MenuBarbeiroController {
         window.setScene(scene1);
         window.show();
     }
+    @FXML
+    private Button btEstoque;
+    @FXML
+    private void onbtEstoqueAction(ActionEvent event) throws IOException {
+        Parent scene1Parent = FXMLLoader.load(getClass().getResource("estoque.fxml"));
+        Scene scene1 = new Scene(scene1Parent);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(scene1);
+        window.show();
+    }
 }

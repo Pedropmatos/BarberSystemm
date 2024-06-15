@@ -1,6 +1,7 @@
 package Model.DAO;
 
 import Model.Classes.Barbeiro;
+import Model.Classes.Servico;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,12 +9,20 @@ import java.util.List;
 
 public class BarbeiroDAOImpl implements GenericDAO<Barbeiro> {
 
+    private static BarbeiroDAOImpl instance;
 
     Barbeiro barbeiro1 = new Barbeiro(1, "barbeiro1","senha");
     Barbeiro barbeiro2 = new Barbeiro(2, "barbeiro2", "senha");
 
 
-    private List<Barbeiro> barbeiros = new ArrayList<>();
+    public List<Barbeiro> barbeiros;
+
+    public BarbeiroDAOImpl() {
+        barbeiros = new ArrayList<>();
+        barbeiros.add(barbeiro1);
+        barbeiros.add(barbeiro2);
+
+    }
     private int currentId = 1;
 
     @Override
@@ -47,6 +56,13 @@ public class BarbeiroDAOImpl implements GenericDAO<Barbeiro> {
     @Override
     public void delete(Barbeiro barbeiro) {
         barbeiros.removeIf(u -> u.getId() == barbeiro.getId());
+    }
+
+    public static synchronized BarbeiroDAOImpl getInstance(){
+        if (instance == null){
+            instance = new BarbeiroDAOImpl();
+        }
+        return instance;
     }
 }
 

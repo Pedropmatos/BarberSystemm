@@ -26,11 +26,11 @@
     <right>
         <AnchorPane prefHeight="490.0" prefWidth="343.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField layoutX="113.0" layoutY="218.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;">
+                <TextField fx:id="EntradaNome" layoutX="113.0" layoutY="218.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;">
                     <font>
                         <Font name="Berlin Sans FB" size="12.0" />
                     </font></TextField>
-                <PasswordField layoutX="110.0" layoutY="250.0" prefHeight="27.0" prefWidth="148.0" promptText="CPF" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;" />
+                <PasswordField fx:id="EntradaCPF" layoutX="110.0" layoutY="250.0" prefHeight="27.0" prefWidth="148.0" promptText="CPF" style="-fx-background-color: transparent; -fx-border-color: #000080; -fx-border-width: 0px 0px 2px 0px;" />
                 <Hyperlink layoutX="112.0" layoutY="460.0" text="Forgot Your Password?" />
                 <Label layoutX="132.0" layoutY="89.0" text="LOGIN">
                     <font>

@@ -19,6 +19,10 @@ abstract public class Pessoa {
         this.telefone = telefone;
     }
 
+    public Pessoa() {
+    }
+
+
     public int getId() {
         return id;
     }

@@ -11,6 +11,9 @@ public class Servico {
         this.preco = preco;
     }
 
+    public Servico() {
+    }
+
     public String getService() {
         return service;
     }

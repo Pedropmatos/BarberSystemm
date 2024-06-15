@@ -8,6 +8,12 @@ public class Cliente extends Pessoa {
         this.sexo = sexo;
     }
 
+
+
+    public Cliente(){
+
+    }
+
     public Cliente(int id, String nome, char sexo) {
         super(id, nome);
         this.sexo = sexo;
