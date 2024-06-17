@@ -52,7 +52,7 @@ public class AgendamentoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Servico servicosArmazenar = new Servico();
+        Servico servicosArmazenar;
         for (int i=0; i < servicosDAO.servicos.size(); i++){
             servicosArmazenar = servicosDAO.servicos.get(i);
             EscolherServico.getItems().add(servicosArmazenar.getService());

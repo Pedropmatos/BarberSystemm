@@ -16,7 +16,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
+import java.util.ResourceBundle;
 
 
 public class AgendaController {
@@ -60,10 +62,9 @@ public class AgendaController {
         window.show();
     }
 
-    ObservableList<Agendamento> agendamentos = FXCollections.observableArrayList(agenda.getAllAgendamentos());
 
     @FXML
-    private void initialize() {
+    private void initialize(URL url, ResourceBundle resourceBundle) {
         ColunaID.setCellValueFactory(new PropertyValueFactory<Agendamento, Integer>("id"));
         ColunaData.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("data"));
         ColunaHora.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("hora"));
@@ -79,7 +80,7 @@ public class AgendaController {
             System.out.println(agendamento.getId() + ", " + agendamento.getNome());
         }
 
-
+        ObservableList<Agendamento> agendamentos = FXCollections.observableArrayList(agenda.getAllAgendamentos());
         Tabela.setItems(agendamentos);
     }
 }

@@ -9,9 +9,21 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
 
     private static AgendamentoDAOImpl instance;
 
+
+    public static AgendamentoDAOImpl getInstance(){
+        if (instance == null){
+            instance = new AgendamentoDAOImpl();
+        }
+        return instance;
+    }
+
+    public List<Agendamento> getAllAgendamentos() {
+        return new ArrayList<>();
+    }
+
     Agendamento agendamento1 = new Agendamento(1, "Pedro Paulo", "Corte", 20, "01/07/2024", "11:00");
     Agendamento agendamento2 = new Agendamento(1, "Filipe Silva", "Barba", 10, "02/07/2024","12:00");
-    private final List<Agendamento> agendamentos;
+    public List<Agendamento> agendamentos;
 
     public AgendamentoDAOImpl() {
         agendamentos = new ArrayList<>();
@@ -53,14 +65,5 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
         agendamentos.removeIf(u -> u.getId() == agendamento.getId());
     }
 
-    public static synchronized AgendamentoDAOImpl getInstance(){
-        if (instance == null){
-            instance = new AgendamentoDAOImpl();
-        }
-        return instance;
-    }
 
-    public List<Agendamento> getAllAgendamentos() {
-        return new ArrayList<Agendamento>();
-    }
 }
