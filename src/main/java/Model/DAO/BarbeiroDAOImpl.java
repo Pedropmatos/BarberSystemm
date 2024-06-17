@@ -1,7 +1,6 @@
 package Model.DAO;
 
 import Model.Classes.Barbeiro;
-import Model.Classes.Servico;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,5 @@
 package Model.Classes;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class Agendamento {
     private int id;
     private String nome;

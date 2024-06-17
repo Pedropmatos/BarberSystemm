@@ -11,7 +11,7 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
 
     Agendamento agendamento1 = new Agendamento(1, "Pedro Paulo", "Corte", 20, "01/07/2024", "11:00");
     Agendamento agendamento2 = new Agendamento(1, "Filipe Silva", "Barba", 10, "02/07/2024","12:00");
-    private List<Agendamento> agendamentos;
+    private final List<Agendamento> agendamentos;
 
     public AgendamentoDAOImpl() {
         agendamentos = new ArrayList<>();
@@ -61,7 +61,6 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
     }
 
     public List<Agendamento> getAllAgendamentos() {
-        // Retorne uma lista de agendamentos aqui
-        return new ArrayList<>();
+        return new ArrayList<Agendamento>();
     }
 }

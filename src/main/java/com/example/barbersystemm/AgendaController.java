@@ -15,10 +15,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+import java.util.List;
+
 
 public class AgendaController {
+
+    @FXML
+    private TableView<Agendamento> Tabela;
 
     @FXML
     private TableColumn<Agendamento, String> ColunaData;
@@ -38,8 +42,7 @@ public class AgendaController {
     @FXML
     private TableColumn<Agendamento, String> ColunaServico;
 
-    @FXML
-    private TableView<Agendamento> Tabela;
+
 
     AgendamentoDAOImpl agenda = AgendamentoDAOImpl.getInstance();
 
@@ -57,16 +60,26 @@ public class AgendaController {
         window.show();
     }
 
+    ObservableList<Agendamento> agendamentos = FXCollections.observableArrayList(agenda.getAllAgendamentos());
+
     @FXML
     private void initialize() {
-        ColunaID.setCellValueFactory(new PropertyValueFactory<>("id"));
-        ColunaData.setCellValueFactory(new PropertyValueFactory<>("data"));
-        ColunaHora.setCellValueFactory(new PropertyValueFactory<>("hora"));
-        ColunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        ColunaPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
-        ColunaServico.setCellValueFactory(new PropertyValueFactory<>("servico"));
+        ColunaID.setCellValueFactory(new PropertyValueFactory<Agendamento, Integer>("id"));
+        ColunaData.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("data"));
+        ColunaHora.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("hora"));
+        ColunaNome.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("nome"));
+        ColunaPreco.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("preco"));
+        ColunaServico.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("servico"));
 
-        ObservableList<Agendamento> agendamentos = FXCollections.observableArrayList(agenda.getAllAgendamentos());
+        List<Agendamento> agendamentosList = agenda.getAllAgendamentos();
+
+        System.out.println("Número de agendamentos carregados: " + agendamentosList.size());
+
+        for (Agendamento agendamento : agendamentosList) {
+            System.out.println(agendamento.getId() + ", " + agendamento.getNome());
+        }
+
+
         Tabela.setItems(agendamentos);
     }
 }
