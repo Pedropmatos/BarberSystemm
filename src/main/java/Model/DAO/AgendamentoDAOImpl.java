@@ -1,7 +1,6 @@
 package Model.DAO;
 
 import Model.Classes.Agendamento;
-import Model.Classes.Barbeiro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +9,17 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
 
     private static AgendamentoDAOImpl instance;
 
-    private List<Agendamento> agendamentos = new ArrayList<>();
+    Agendamento agendamento1 = new Agendamento(1, "Pedro Paulo", "Corte", 20, "01/07/2024", "11:00");
+    Agendamento agendamento2 = new Agendamento(1, "Filipe Silva", "Barba", 10, "02/07/2024","12:00");
+    private List<Agendamento> agendamentos;
+
+    public AgendamentoDAOImpl() {
+        agendamentos = new ArrayList<>();
+        agendamentos.add(agendamento1);
+        agendamentos.add(agendamento2);
+    }
     private int currentId = 1;
+
 
     @Override
     public void save(Agendamento agendamento) {
@@ -36,7 +44,7 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
     public void update(Agendamento agendamento) {
         Agendamento existingUser = findById(agendamento.getId());
         if (existingUser != null) {
-            existingUser.setCliente(agendamento.getCliente());
+            existingUser.setNome(agendamento.getNome());
         }
     }
 
@@ -44,5 +52,16 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
     public void delete(Agendamento agendamento) {
         agendamentos.removeIf(u -> u.getId() == agendamento.getId());
     }
-}
 
+    public static synchronized AgendamentoDAOImpl getInstance(){
+        if (instance == null){
+            instance = new AgendamentoDAOImpl();
+        }
+        return instance;
+    }
+
+    public List<Agendamento> getAllAgendamentos() {
+        // Retorne uma lista de agendamentos aqui
+        return new ArrayList<>();
+    }
+}

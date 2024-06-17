@@ -6,22 +6,20 @@ import java.util.Date;
 
 public class Agendamento {
     private int id;
-    private Cliente cliente;
-    private Servico servico;
+    private String nome;
+    private String servico;
     private float preco;
-    private Date data;
-    private String detalhamento;
+    private String data;
 
-    public Agendamento(int id, Cliente cliente, Servico servico, float preco, String data) {
+    private String hora;
+
+    public Agendamento(int id, String nome, String servico, float preco, String data, String hora) {
         this.id = id;
-        this.cliente = cliente;
+        this.nome = nome;
         this.servico = servico;
         this.preco = preco;
-        try {
-            this.data = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
+        this.data = data;
+        this.hora = hora;
     }
 
     public int getId() {
@@ -32,19 +30,19 @@ public class Agendamento {
         this.id = id;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public String getNome() {
+        return nome;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public Servico getServico() {
+    public String getServico() {
         return servico;
     }
 
-    public void setServico(Servico servico) {
+    public void setServico(String servico) {
         this.servico = servico;
     }
 
@@ -56,19 +54,19 @@ public class Agendamento {
         this.preco = preco;
     }
 
-    public Date getDate() {
+    public String getData() {
         return data;
     }
 
-    public void setDate(Date date) {
+    public void setData(String data) {
         this.data = data;
     }
 
-    public String getDetalhamento() {
-        return detalhamento;
+    public String getHora() {
+        return hora;
     }
 
-    public void setDetalhamento(String detalhamento) {
-        this.detalhamento = detalhamento;
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 }

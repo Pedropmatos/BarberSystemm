@@ -23,11 +23,11 @@ public class LoginClienteController {
     @FXML
     private TextField EntradaNome;
 
+    ClienteDAOImpl loginCliente = ClienteDAOImpl.getInstance();
 
     @FXML
     private Button btVoltar;
 
-    ClienteDAOImpl loginCliente = ClienteDAOImpl.getInstance();
     @FXML
     private void onbtVoltarAction(ActionEvent event) throws IOException {
         Parent scene1Parent = FXMLLoader.load(getClass().getResource("login.fxml"));
@@ -59,12 +59,6 @@ public class LoginClienteController {
 
         String nome = EntradaNome.getText();
         String cpf = EntradaCPF.getText();
-
-        if (nome.isEmpty() || cpf.isEmpty()) {
-            System.out.println("Nome ou CPF estão vazios");
-            // Adicione um alerta para o usuário aqui
-            return;
-        }
 
         for (Cliente cliente : loginCliente.clientes) {
             if (nome.equals(cliente.getNome()) && cpf.equals(cliente.getCpf())) {

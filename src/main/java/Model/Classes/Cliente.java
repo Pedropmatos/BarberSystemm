@@ -8,8 +8,6 @@ public class Cliente extends Pessoa {
         this.sexo = sexo;
     }
 
-
-
     public Cliente(){
 
     }
@@ -27,16 +25,6 @@ public class Cliente extends Pessoa {
         this.sexo = sexo;
     }
 
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "sexo=" + sexo +
-                ", id=" + id +
-                ", nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", telefone='" + telefone + '\'' +
-                '}';
-    }
-    
+
 }
 

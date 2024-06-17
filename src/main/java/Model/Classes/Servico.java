@@ -38,12 +38,4 @@ public class Servico {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Servico{" +
-                "id=" + id +
-                ", service='" + service + '\'' +
-                ", preco=" + preco +
-                '}';
-    }
 }

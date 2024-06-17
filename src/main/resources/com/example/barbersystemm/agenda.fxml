@@ -17,14 +17,14 @@
                   <Font name="Bauhaus 93" size="24.0" />
                </font>
             </Label>
-            <TableView editable="true" layoutX="75.0" layoutY="97.0" prefHeight="235.0" prefWidth="451.0">
+            <TableView fx:id="Tabela" editable="true" layoutX="75.0" layoutY="97.0" prefHeight="235.0" prefWidth="451.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="ID" />
-                <TableColumn prefWidth="75.0" text="Nome" />
-                  <TableColumn prefWidth="75.0" text="Serviço" />
-                  <TableColumn prefWidth="75.0" text="Preço" />
-                  <TableColumn prefWidth="75.0" text="Data" />
-                  <TableColumn prefWidth="75.0" text="Hora" />
+                <TableColumn fx:id="ColunaID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="ColunaNome" prefWidth="75.0" text="Nome" />
+                  <TableColumn fx:id="ColunaServico" prefWidth="75.0" text="Serviço" />
+                  <TableColumn fx:id="ColunaPreco" prefWidth="75.0" text="Preço" />
+                  <TableColumn fx:id="ColunaData" prefWidth="75.0" text="Data" />
+                  <TableColumn fx:id="ColunaHora" prefWidth="75.0" text="Hora" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
