@@ -62,9 +62,8 @@ public class AgendaController {
         window.show();
     }
 
-
     @FXML
-    private void initialize(URL url, ResourceBundle resourceBundle) {
+    private void initialize() {
         ColunaID.setCellValueFactory(new PropertyValueFactory<Agendamento, Integer>("id"));
         ColunaData.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("data"));
         ColunaHora.setCellValueFactory(new PropertyValueFactory<Agendamento, String>("hora"));
