@@ -42,21 +42,6 @@ public class ServicoDAOImpl implements GenericDAO<Servico> {
                 .orElse(null);
     }
 
-    @Override
-    public List<Servico> findAll() {
-        return new ArrayList<>(servicos);
-    }
-
-    @Override
-    public void update(Servico entity) {
-
-    }
-
-    @Override
-    public void delete(Servico entity) {
-
-    }
-
     public static synchronized ServicoDAOImpl getInstance(){
         if (instance == null){
             instance = new ServicoDAOImpl();

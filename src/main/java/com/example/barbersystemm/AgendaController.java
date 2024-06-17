@@ -71,12 +71,6 @@ public class AgendaController {
 
         List<Agendamento> agendamentosList = agenda.getAllAgendamentos();
 
-        System.out.println("Número de agendamentos carregados: " + agendamentosList.size());
-
-        for (Agendamento agendamento : agendamentosList) {
-            System.out.println(agendamento.getId() + ", " + agendamento.getNome());
-        }
-
         ObservableList<Agendamento> agendamentos = FXCollections.observableArrayList(agenda.getAllAgendamentos());
         Tabela.setItems(agenda.getAllAgendamentos());
     }

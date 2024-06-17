@@ -30,7 +30,7 @@ public class ClienteDAOImpl implements GenericDAO<Cliente> {
         clientes.add(cliente5);
     }
 
-    private int currentId = 1; // Para gerar IDs únicos
+    private int currentId = 1;
 
     @Override
     public void save(Cliente cliente) {
@@ -44,11 +44,6 @@ public class ClienteDAOImpl implements GenericDAO<Cliente> {
                 .filter(user -> user.getId() == id)
                 .findFirst()
                 .orElse(null);
-    }
-
-    @Override
-    public List<Cliente> findAll() {
-        return new ArrayList<>(clientes);
     }
 
     @Override

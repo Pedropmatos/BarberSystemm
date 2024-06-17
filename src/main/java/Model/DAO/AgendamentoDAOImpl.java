@@ -56,11 +56,6 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
     }
 
     @Override
-    public List<Agendamento> findAll() {
-        return new ArrayList<>(agendamentos);
-    }
-
-    @Override
     public void update(Agendamento agendamento) {
         Agendamento existingUser = findById(agendamento.getId());
         if (existingUser != null) {

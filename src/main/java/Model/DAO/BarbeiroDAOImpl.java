@@ -39,16 +39,10 @@ public class BarbeiroDAOImpl implements GenericDAO<Barbeiro> {
     }
 
     @Override
-    public List<Barbeiro> findAll() {
-        return new ArrayList<>(barbeiros);
-    }
-
-    @Override
     public void update(Barbeiro barbeiro) {
         Barbeiro existingUser = findById(barbeiro.getId());
         if (existingUser != null) {
             existingUser.setNome(barbeiro.getNome());
-            existingUser.setCpf(barbeiro.getCpf());
         }
     }
 
