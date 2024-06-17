@@ -1,6 +1,8 @@
 package Model.DAO;
 
 import Model.Classes.Agendamento;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +19,12 @@ public class AgendamentoDAOImpl implements GenericDAO<Agendamento>{
         return instance;
     }
 
-    public List<Agendamento> getAllAgendamentos() {
-        return new ArrayList<>();
+    public ObservableList<Agendamento> getAllAgendamentos() {
+        return FXCollections.observableArrayList(agendamentos);
     }
 
     Agendamento agendamento1 = new Agendamento(1, "Pedro Paulo", "Corte", 20, "01/07/2024", "11:00");
-    Agendamento agendamento2 = new Agendamento(1, "Filipe Silva", "Barba", 10, "02/07/2024","12:00");
+    Agendamento agendamento2 = new Agendamento(2, "Filipe Silva", "Barba", 10, "02/07/2024","12:00");
     public List<Agendamento> agendamentos;
 
     public AgendamentoDAOImpl() {
